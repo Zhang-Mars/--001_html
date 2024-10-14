@@ -1,6 +1,3 @@
-# --001_html
-使用django建立可以至資料庫檢測資訊的會員填寫介面HTML
-
 <div id="content-main">
   <form action="/myapp/joininformation/" method="post" id="registration-form">
     <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
@@ -154,7 +151,8 @@
 
   </form>
 </div>
-
+{{email_exists}}
+{% comment %} 以下可以槓掉____________________________________________________________________________________________________________ {% endcomment %}
 資料狀態：{{res}}
 <br>
 {% if res == "OK" %}
@@ -222,13 +220,3 @@
 
   });
 </script>
-
-
-
-
-
-
-
-
-
-
